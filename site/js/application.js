@@ -6,6 +6,9 @@ $.getJSON("./data/verses.json", function(json) {
     console.log(json); // this will show the info it in firebug console
 });
 
+
+
+
 var diameter = 960,
     format = d3.format(",d"),
     color = d3.scale.category20c();
@@ -20,7 +23,7 @@ var svg = d3.select("body").append("svg")
     .attr("height", diameter)
     .attr("class", "bubble");
 
-d3.json("../data/frase_count.json", function(error, root) {
+d3.json("./data/frase_count.json", function(error, root) {
   if (error) throw error;
 
 
